@@ -26,7 +26,7 @@ df['reviews_amount'] = df['reviews_amount'].str.replace('[\(\)]', '', regex=True
 df['reviews_amount'] = df['reviews_amount'].fillna(0).astype(int)
 
 #Tratar os preços como floats e calcular totais
-df['old_price'] = df['old_price_reais'] + df['old_price_centavos'] / 100
+df['price'] = df['old_price_reais'] + df['old_price_centavos'] / 100
 df['new_price'] = df['new_price_reais'] + df['new_price_centavos'] / 100
 
 #Remover as colunas antigas
